@@ -11,6 +11,6 @@ services:
       INGRESS_PORT: "80"
       EGRESS_URLS: "https://testdockercompose.free.beeceptor.com"
       ACTION: "keep"
-      FIELDS: "temperature, volume, rmp"
+      FIELDS: "temperature, volume, rpm"
     ports:
       - 80:80
