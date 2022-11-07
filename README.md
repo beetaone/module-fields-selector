@@ -5,7 +5,7 @@
 | Name           | Fields Selector                           |
 | Version        | v1.0.0                                |
 | DockerHub | [weevenetwork/fields-selector](https://hub.docker.com/r/weevenetwork/fields-selector) |
-| authors        | Author 1, Author 2                    |
+| authors        | Jakub Grzelak                   |
 
 - [Fields Selector](#fields-selector)
   - [Description](#description)
