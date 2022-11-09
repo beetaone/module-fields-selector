@@ -6,9 +6,24 @@ Edit this file to implement your module.
 """
 
 from logging import getLogger
+import os
 
 log = getLogger("module")
 
+__ACTION__ = os.getenv("ACTION", "keep")
+if os.getenv("FIELDS"):
+    __FIELDS__ = [field.strip() for field in os.getenv("FIELDS").split(',')]
+else:
+    __FIELDS__ = None
+
+def getSelectedData(data):
+    selected_data = {}
+
+    for field in list(data.keys()):
+        if (field in __FIELDS__ and __ACTION__ == "keep") or (not field in __FIELDS__ and __ACTION__ == "remove"):
+            selected_data[field] = data[field]
+
+    return selected_data
 
 def module_main(received_data: any) -> [any, str]:
     """
@@ -27,9 +42,12 @@ def module_main(received_data: any) -> [any, str]:
     log.debug("Processing ...")
 
     try:
-        # YOUR CODE HERE
-
-        processed_data = received_data
+        if type(received_data) == list:
+            processed_data = []
+            for data in received_data:
+                processed_data.append(getSelectedData(data))
+        else:
+            processed_data = getSelectedData(received_data)
 
         return processed_data, None
 
