@@ -3,7 +3,7 @@
 |                |                                       |
 | -------------- | ------------------------------------- |
 | Name           | Fields Selector                           |
-| Version        | v1.0.0                                |
+| Version        | v1.0.1                                |
 | DockerHub | [weevenetwork/fields-selector](https://hub.docker.com/r/weevenetwork/fields-selector) |
 | authors        | Jakub Grzelak                   |
 
