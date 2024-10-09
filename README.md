@@ -4,14 +4,14 @@
 | -------------- | ------------------------------------- |
 | Name           | Fields Selector                           |
 | Version        | v1.0.1                                |
-| DockerHub | [weevenetwork/fields-selector](https://hub.docker.com/r/weevenetwork/fields-selector) |
+| DockerHub | [beetaone/fields-selector](https://hub.docker.com/r/beetaone/fields-selector) |
 | authors        | Jakub Grzelak                   |
 
 - [Fields Selector](#fields-selector)
   - [Description](#description)
   - [Environment Variables](#environment-variables)
     - [Module Specific](#module-specific)
-    - [Set by the weeve Agent on the edge-node](#set-by-the-weeve-agent-on-the-edge-node)
+    - [Set by the beetaone Agent on the edge-node](#set-by-the-beetaone-agent-on-the-edge-node)
   - [Dependencies](#dependencies)
   - [Input](#input)
   - [Output](#output)
@@ -24,7 +24,7 @@ This module allows to select data fields (labels) to keep or remove from receive
 
 ### Module Specific
 
-The following module configurations can be provided in a data service designer section on weeve platform:
+The following module configurations can be provided in a data service designer section on beetaone platform:
 
 | Name                 | Environment Variables     | type     | Description                                              |
 | -------------------- | ------------------------- | -------- | -------------------------------------------------------- |
@@ -32,9 +32,9 @@ The following module configurations can be provided in a data service designer s
 | Fields    | FIELDS         | string  | List of comma (,) separated data fields (labels) names to apply action on.            |
 
 
-### Set by the weeve Agent on the edge-node
+### Set by the beetaone Agent on the edge-node
 
-Other features required for establishing the inter-container communication between modules in a data service are set by weeve agent.
+Other features required for establishing the inter-container communication between modules in a data service are set by beetaone agent.
 
 | Environment Variables | type   | Description                                    |
 | --------------------- | ------ | ---------------------------------------------- |
